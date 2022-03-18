@@ -25,7 +25,6 @@
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.11.0",
-        "@inertiajs/inertia-vue": "^0.8.0",
-        "vue": "^3.2.31"
+        "@inertiajs/inertia-vue": "^0.8.0"
     }
 }

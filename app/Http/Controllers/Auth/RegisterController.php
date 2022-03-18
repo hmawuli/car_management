@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -39,6 +40,16 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    public function showRegistrationForm()
+    {
+        //return view('auth.register');
+        abort(404,'The page you are looking is not present');
+    }
+
+    public function register(Request $request)
+    {
+        abort(400,'This request can not be process');
     }
 
     /**
