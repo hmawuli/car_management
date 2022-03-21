@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/',[WelcomeController::class,'index']);
 
-Route::get('/dashboard',[DashboardController::class,'index']);
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/dashboard',[DashboardController::class,'index']);
+
+});
 
 
 
@@ -30,6 +33,6 @@ Route::get('/dashboard',[DashboardController::class,'index']);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+ Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
