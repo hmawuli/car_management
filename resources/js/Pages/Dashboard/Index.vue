@@ -5,8 +5,14 @@
 </template>
 
 <script>
+//import { component } from 'vue/types/umd'
+import Layout from "./../../Shared/Layout.vue";
 export default {
-    props: ['fcar','lcar'],
+
+    components:{
+      Layout
+    },
+    props: ['fcar','lcar']
 }
 </script>
 
