@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\car;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -21,22 +22,22 @@ class AdminController extends Controller
          $status = $request->status;
             return Inertia::render('admin/add_car');
 
-        //  $data =[
-        //      'car_name' => '',
-        //      'description' => '',
-        //      'model_year' => '',
-        //      'car_brand' => '',
-        //      'color' => '',
-        //      'capacity' => '',
-        //      'plate_number' => '',
-        //      'rate' => '',
-        //      'status' => '',
-        //  ];
-        //  Car::create($data);
+          $data =[
+            'car_name' => '',
+             'description' => '',
+              'model_year' => '',
+              'car_brand' => '',
+              'color' => '',
+              'capacity' => '',
+              'plate_number' => '',
+              'rate' => '',
+              'status' => '',
+          ];
+          car::create($data);
     }
         public function update_car(Request $request){
-            $car_name = $request-> car_name;
-            $description = $request->description;
+        $car_name = $request-> car_name;
+        $description = $request->description;
          $model_year = $request->model_year;
          $car_brand = $request->car_brand;
          $color = $request->color;
@@ -47,5 +48,7 @@ class AdminController extends Controller
          $status = $request->status;
          return Inertia::render('update_car/store');
         }
+
+
 
 }
