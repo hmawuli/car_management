@@ -1,7 +1,13 @@
 <template>
-  <div>
-      <p>This is Dashboard, welcome {{ fcar }},{{ lcar }} </p>
-  </div>
+  <layout>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <p>This is Dashboard, welcome {{ fcar }},{{ lcar }} </p>
+              </div>
+          </div>
+        </div>
+  </layout>
 </template>
 
 <script>
